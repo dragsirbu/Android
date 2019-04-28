@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:background="@color/colorBlack"
+    >
+    <TextView
+        android:layout_margin="8dp"
+        android:id="@+id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Post title"
+        android:textSize="24sp"
+        android:textColor="@color/colorWhite"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/posted_by_view"
+        android:textColor="@color/colorWhite"
+        android:layout_margin="8dp"
+        android:text="Posted by"
+        android:textSize="16sp"
+        android:textStyle="italic"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:id="@+id/meme_photo_view"
+        android:layout_height="wrap_content"
+        tools:srcCompat="@tools:sample/backgrounds/scenic[7]"
+        android:scaleType="fitCenter" />
+
+</LinearLayout>

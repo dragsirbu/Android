@@ -4,6 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.bumptech.glide.Glide;
+import com.example.memeapp.Fragments.HomeFragment;
+import com.example.memeapp.Fragments.SettingsFragment;
+import com.example.memeapp.Fragments.UserProfileFragment;
 import com.example.memeapp.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -100,30 +103,30 @@ public class HomeDrawerActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-//        int id = item.getItemId();
-//
-//        if (id == R.id.nav_home) {
-//            getSupportActionBar().setTitle("Home");
-//            getSupportFragmentManager().beginTransaction().replace(R.id.container,new HomeFragment()).commit();
-//        }
-//        else if (id == R.id.nav_profile) {
-//            getSupportActionBar().setTitle("Profile");
-//            getSupportFragmentManager().beginTransaction().replace(R.id.container,new ProfileFragment()).commit();
-//        }
-//        else if (id == R.id.nav_settings) {
-//            getSupportActionBar().setTitle("Settings");
-//            getSupportFragmentManager().beginTransaction().replace(R.id.container,new SettingsFragment()).commit();
-//        }
-//        else if (id == R.id.nav_signout) {
-//            FirebaseAuth.getInstance().signOut();
-//            Intent loginActivity = new Intent(getApplicationContext(),LogInActivity.class);
-//            startActivity(loginActivity);
-//            finish();
-//        }
-//
-//        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-//        drawer.closeDrawer(GravityCompat.START);
+
+        int id = item.getItemId();
+
+        if (id == R.id.nav_home) {
+            getSupportActionBar().setTitle("Home");
+            getSupportFragmentManager().beginTransaction().replace(R.id.container,new HomeFragment()).commit();
+        }
+        else if (id == R.id.nav_profile) {
+            getSupportActionBar().setTitle("Profile");
+            getSupportFragmentManager().beginTransaction().replace(R.id.container,new UserProfileFragment()).commit();
+        }
+        else if (id == R.id.nav_settings) {
+            getSupportActionBar().setTitle("Settings");
+            getSupportFragmentManager().beginTransaction().replace(R.id.container,new SettingsFragment()).commit();
+        }
+        else if (id == R.id.nav_signout) {
+            FirebaseAuth.getInstance().signOut();
+            Intent loginActivity = new Intent(getApplicationContext(),LogInActivity.class);
+            startActivity(loginActivity);
+            finish();
+        }
+
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
 
         return true;
     }

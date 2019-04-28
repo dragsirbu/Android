@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "808604540019",
+    "firebase_url": "https://memeapp-2e32f.firebaseio.com",
+    "project_id": "memeapp-2e32f",
+    "storage_bucket": "memeapp-2e32f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:808604540019:android:dc6db293d6f66da6",
+        "android_client_info": {
+          "package_name": "com.example.memeapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "808604540019-iv72i27vlmcnastvg2v8s38fn929r9v1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.memeapp",
+            "certificate_hash": "d64ce7dc69af4b8fe6a07097667d5d3d322870ee"
+          }
+        },
+        {
+          "client_id": "808604540019-nua80ut7cvual1auh7ao2gj349s06a4m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5nhu_lpiJzLSSylXywr5TS0aKLLcAbqU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "808604540019-nua80ut7cvual1auh7ao2gj349s06a4m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

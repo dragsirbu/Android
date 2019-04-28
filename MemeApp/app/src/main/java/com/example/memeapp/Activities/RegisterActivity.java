@@ -94,27 +94,33 @@ public class RegisterActivity extends AppCompatActivity {
                 final String confirmPassword = confirmPasswordField.getText().toString();
 
                 registerButton.setVisibility(View.INVISIBLE);
+                logInButton.setVisibility(View.INVISIBLE);
                 progressBar.setVisibility(View.VISIBLE);
 
                 if (username.isEmpty()) {
                     showToast("Username field is required!");
                     registerButton.setVisibility(View.VISIBLE);
+                    logInButton.setVisibility(View.VISIBLE);
                     progressBar.setVisibility(View.INVISIBLE);
                 } else if (mail.isEmpty()) {
                     showToast("Mail field is required!");
                     registerButton.setVisibility(View.VISIBLE);
+                    logInButton.setVisibility(View.VISIBLE);
                     progressBar.setVisibility(View.INVISIBLE);
                 } else if (password.isEmpty()) {
                     showToast("Password field is required!");
                     registerButton.setVisibility(View.VISIBLE);
+                    logInButton.setVisibility(View.VISIBLE);
                     progressBar.setVisibility(View.INVISIBLE);
                 } else if (confirmPassword.isEmpty()) {
                     showToast("Confirm password field is required!");
                     registerButton.setVisibility(View.VISIBLE);
+                    logInButton.setVisibility(View.VISIBLE);
                     progressBar.setVisibility(View.INVISIBLE);
                 } else if (!password.equals(confirmPassword)) {
                     showToast("Password and Confirm Password must match!");
                     registerButton.setVisibility(View.VISIBLE);
+                    logInButton.setVisibility(View.VISIBLE);
                     progressBar.setVisibility(View.INVISIBLE);
                 } else {
 
@@ -178,6 +184,7 @@ public class RegisterActivity extends AppCompatActivity {
                         else {
                             showToast("Account creation failed!");
                             registerButton.setVisibility(View.VISIBLE);
+                            logInButton.setVisibility(View.VISIBLE);
                             progressBar.setVisibility(View.INVISIBLE);
                         }
                     }

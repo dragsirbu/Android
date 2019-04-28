@@ -110,7 +110,7 @@ public class LogInActivity extends AppCompatActivity {
     }
 
     private void updateView() {
-        Intent startHomeActivity = new Intent(getApplicationContext(),HomeActivity.class);
+        Intent startHomeActivity = new Intent(getApplicationContext(),HomeDrawerActivity.class);
         startActivity(startHomeActivity);
         finish();
     }

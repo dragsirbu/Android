@@ -204,7 +204,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     //show home page
     private void updateView() {
-        Intent startHomeActivity = new Intent(getApplicationContext(),HomeActivity.class);
+        Intent startHomeActivity = new Intent(getApplicationContext(),HomeDrawerActivity.class);
         startActivity(startHomeActivity);
         finish();
     }

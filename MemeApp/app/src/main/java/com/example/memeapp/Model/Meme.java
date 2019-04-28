@@ -5,7 +5,7 @@ public class Meme {
     private String memeId;
     private String picture;
     private String title;
-    private String userId;
+    private String userName;
     private String userPhoto;
     private Object postedAt;
 
@@ -13,10 +13,10 @@ public class Meme {
 
     }
 
-    public Meme(String picture, String title, String userId, String userPhoto) {
+    public Meme(String picture, String title, String userName, String userPhoto) {
         this.picture = picture;
         this.title = title;
-        this.userId = userId;
+        this.userName = userName;
         this.userPhoto = userPhoto;
     }
 
@@ -32,8 +32,8 @@ public class Meme {
         this.title = title;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public void setUserPhoto(String userPhoto) {
@@ -56,8 +56,8 @@ public class Meme {
         return title;
     }
 
-    public String getUserId() {
-        return userId;
+    public String getUserName() {
+        return userName;
     }
 
     public String getUserPhoto() {

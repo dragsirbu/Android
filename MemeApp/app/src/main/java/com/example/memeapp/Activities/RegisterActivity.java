@@ -40,6 +40,7 @@ public class RegisterActivity extends AppCompatActivity {
     Button registerButton;
     ImageView userPhoto;
     ProgressBar progressBar;
+    Button logInButton;
 
     private static final int REQ_CODE = 1;
 
@@ -58,6 +59,17 @@ public class RegisterActivity extends AppCompatActivity {
         registerButton = findViewById(R.id.register_btn);
         userPhoto = findViewById(R.id.user_image);
         progressBar = findViewById(R.id.progress_bar);
+        logInButton = findViewById(R.id.log_in_btn);
+
+        logInButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),LogInActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
         progressBar.setVisibility(View.INVISIBLE);
 
         userPhoto.setOnClickListener(new View.OnClickListener() {
@@ -146,6 +158,8 @@ public class RegisterActivity extends AppCompatActivity {
         if ((resultCode == RESULT_OK) && (requestCode == REQ_CODE) && (data != null)) {
             profilePhotoUri = data.getData();
             userPhoto.setImageURI(profilePhotoUri);
+        } else if ((resultCode == RESULT_OK) && (requestCode == REQ_CODE) && (data == null)) {
+            showToast("Please choose a profile picture!");
         }
     }
 

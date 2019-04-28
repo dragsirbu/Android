@@ -273,7 +273,7 @@ public class HomeDrawerActivity extends AppCompatActivity
                                     // create new Meme
                                     Meme meme = new Meme(memeDownloadLink,
                                             addMemeTitle.getText().toString(),
-                                            currentUser.getUid(),
+                                            currentUser.getDisplayName(),
                                             currentUser.getPhotoUrl().toString());
 
                                     // Add post to firebase database
